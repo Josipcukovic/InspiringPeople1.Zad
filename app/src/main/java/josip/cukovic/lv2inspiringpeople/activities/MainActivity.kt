@@ -36,11 +36,6 @@ class MainActivity : AppCompatActivity() {
         const val KEY_EXTRA_QUOTE = "quote"
     }
 
-    override fun onResume() {
-        (binding.rvInspiringPeople.adapter as PeopleAdapter).refreshData(PeopleRepository.people)
-        super.onResume()
-    }
-
     private fun retrieveData() {
         val intent = Intent(this, AddNewPersonActivity::class.java)
         startActivityForResult(intent, REQUEST_CODE)
@@ -59,6 +54,10 @@ class MainActivity : AppCompatActivity() {
             quotes.add(data?.getStringExtra(KEY_EXTRA_QUOTE).toString())
             if(name == "null" ||year == "null" || description == "null") return
             addNewPersonToRepository(name,year,description,quotes)
+            
+           val adapter = (binding.rvInspiringPeople.adapter as PeopleAdapter)
+            adapter.refreshData(PeopleRepository.people)
+            binding.rvInspiringPeople.scrollToPosition(adapter.itemCount-1)
         }
 
         super.onActivityResult(requestCode, resultCode, data)

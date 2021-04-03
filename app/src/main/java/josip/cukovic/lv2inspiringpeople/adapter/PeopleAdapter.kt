@@ -30,7 +30,8 @@ class PeopleAdapter( people : MutableList<InspiringPerson>): RecyclerView.Adapte
     fun refreshData(person: MutableList<InspiringPerson>){
         this.people.clear()
         this.people.addAll((person))
-        notifyDataSetChanged()
+        notifyItemInserted(itemCount-1)
+
     }
 
 }
