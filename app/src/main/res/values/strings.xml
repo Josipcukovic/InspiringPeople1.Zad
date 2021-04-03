@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Inspiring People</string>
+    <string name="save">Save</string>
+    <string name="every_day_is_a_fine_day">\'every day is a fine day\'</string>
+    <string name="enter_some_quote">Enter some quote:</string>
+    <string name="this_is_some_description">This is some description</string>
+    <string name="enter_some_description">Enter some description:</string>
+    <string name="_1941_2011">1941-2011</string>
+    <string name="enter_the_date_of_birth_death">Enter the year of birth/death:</string>
+    <string name="dennis_ritchie">Dennis Ritchie</string>
+    <string name="enter_the_name_of_inspiring_person">Enter the name of inspiring person:</string>
+    <string name="random_quote">This is a random quote</string>
+    <string name="add_new_person">Add new person</string>
+    <string name="name">name</string>
+    <string name="_2015_3000">2015-3000</string>
+    <string name="some_description">some description</string>
+</resources>

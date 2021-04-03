@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddNewPersonActivity">
+
+    <TextView
+        android:id="@+id/tv_enter_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/margin_top_and_left"
+        android:layout_marginStart="@dimen/margin_top_and_left"
+        android:text="@string/enter_the_name_of_inspiring_person"/>
+
+    <EditText
+        android:id="@+id/et_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:inputType="textPersonName"
+        android:hint="@string/dennis_ritchie"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_name"
+        app:layout_constraintLeft_toLeftOf="@id/tv_enter_name"
+        app:layout_constraintRight_toRightOf="@id/tv_enter_name" />
+
+    <TextView
+        android:id="@+id/tv_enter_date"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:text="@string/enter_the_date_of_birth_death"
+        android:layout_marginTop="@dimen/margin_top_and_left"
+        android:layout_marginStart="@dimen/margin_top_and_left"
+        app:layout_constraintTop_toBottomOf="@id/et_input_name"
+        app:layout_constraintLeft_toLeftOf="@id/et_input_name"
+        app:layout_constraintRight_toRightOf="@id/et_input_name"/>
+
+    <EditText
+        android:id="@+id/et_input_date"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:hint="@string/_1941_2011"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_date"
+        app:layout_constraintLeft_toLeftOf="@id/tv_enter_date"
+        app:layout_constraintRight_toRightOf="@id/tv_enter_date"
+        android:gravity="center"
+        android:digits="0123456789-"/>
+
+    <TextView
+        android:id="@+id/tv_enter_description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:layout_marginTop="@dimen/margin_top_and_left"
+        android:layout_marginStart="@dimen/margin_top_and_left"
+        app:layout_constraintTop_toBottomOf="@id/et_input_date"
+        app:layout_constraintLeft_toLeftOf="@id/et_input_date"
+        app:layout_constraintRight_toRightOf="@id/et_input_date"
+        android:text="@string/enter_some_description"/>
+
+    <EditText
+        android:id="@+id/et_input_description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:inputType="textImeMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_description"
+        app:layout_constraintLeft_toLeftOf="@id/tv_enter_description"
+        app:layout_constraintRight_toRightOf="@id/tv_enter_description"
+        android:hint="@string/this_is_some_description"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_enter_quote"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:layout_marginTop="@dimen/margin_top_and_left"
+        android:layout_marginStart="@dimen/margin_top_and_left"
+        app:layout_constraintTop_toBottomOf="@id/et_input_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/enter_some_quote"
+        />
+
+    <EditText
+        android:id="@+id/et_input_quote"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:hint="@string/every_day_is_a_fine_day"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_quote"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_save_person"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/match_constraint"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

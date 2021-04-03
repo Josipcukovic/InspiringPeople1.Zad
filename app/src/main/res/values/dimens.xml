@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top_and_left">5dp</dimen>
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="padding_of5">5dp</dimen>
+    <dimen name="big_text">20sp</dimen>
+    <dimen name="little_margin">3dp</dimen>
+    <dimen name="picture_width">100dp</dimen>
+</resources>
