@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         val name :String
         val year : String
         val description : String
-        val quotes = mutableListOf<String>(getString(R.string.random_quote))
+        val quotes = mutableListOf<String>()
 
         if(requestCode == REQUEST_CODE){
             name = data?.getStringExtra(KEY_EXTRA_NAME).toString()
