@@ -12,20 +12,20 @@ import josip.cukovic.lv2inspiringpeople.databinding.ActivityMainBinding
 import josip.cukovic.lv2inspiringpeople.model.InspiringPerson
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var mainBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(mainBinding.root)
         setupUI()
     }
 
     private fun setupUI() {
-        val people = binding.rvInspiringPeople
+        val people = mainBinding.rvInspiringPeople
         people.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         people.adapter = PeopleAdapter(PeopleRepository.people)
-        binding.btnAddNewPerson.setOnClickListener{retrieveData()}
+        mainBinding.btnAddNewPerson.setOnClickListener{retrieveData()}
     }
 
     companion object{
@@ -54,10 +54,10 @@ class MainActivity : AppCompatActivity() {
             quotes.add(data?.getStringExtra(KEY_EXTRA_QUOTE).toString())
             if(name == "null" ||year == "null" || description == "null") return
             addNewPersonToRepository(name,year,description,quotes)
-            
-           val adapter = (binding.rvInspiringPeople.adapter as PeopleAdapter)
+
+           val adapter = (mainBinding.rvInspiringPeople.adapter as PeopleAdapter)
             adapter.refreshData(PeopleRepository.people)
-            binding.rvInspiringPeople.scrollToPosition(adapter.itemCount-1)
+            mainBinding.rvInspiringPeople.scrollToPosition(adapter.itemCount-1)
         }
 
         super.onActivityResult(requestCode, resultCode, data)

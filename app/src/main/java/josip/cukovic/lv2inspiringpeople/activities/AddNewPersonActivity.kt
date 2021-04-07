@@ -8,23 +8,23 @@ import android.widget.Toast
 import josip.cukovic.lv2inspiringpeople.databinding.ActivityAddNewPersonBinding
 
 class AddNewPersonActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityAddNewPersonBinding
+    private lateinit var addNewPersonBinding : ActivityAddNewPersonBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAddNewPersonBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        addNewPersonBinding = ActivityAddNewPersonBinding.inflate(layoutInflater)
+        setContentView(addNewPersonBinding.root)
         setupUI()
     }
 
-    private fun setupUI() = binding.btnSavePerson.setOnClickListener{ addPerson()}
+    private fun setupUI() = addNewPersonBinding.btnSavePerson.setOnClickListener{ addPerson()}
 
 
     private fun addPerson() {
-        val name = binding.etInputName.text.toString().trim()
-        val year = binding.etInputDate.text.toString().trim()
-        val description = binding.etInputDescription.text.toString().trim()
-        val quote = binding.etInputQuote.text.toString().trim()
+        val name = addNewPersonBinding.etInputName.text.toString().trim()
+        val year = addNewPersonBinding.etInputDate.text.toString().trim()
+        val description = addNewPersonBinding.etInputDescription.text.toString().trim()
+        val quote = addNewPersonBinding.etInputQuote.text.toString().trim()
 
         if(!isFilled(name,year,description,quote)){
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_LONG).show()
